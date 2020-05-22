@@ -8,7 +8,11 @@ class App < Sinatra::Base
   end
 
   post '/team' do
-    @team = params["name"]
+    # params.each do |k,v|
+    #   instance_variable_set("@#{k}", "#{v}")
+    # end
+
+    @name = params["name"]
     @coach = params["coach"]
     @pg = params["pg"]
     @sg = params["sg"]
